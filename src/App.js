@@ -11,6 +11,7 @@ import { AppConfig } from './AppConfig';
 //paginas de TPP
 
  import Users from './pages/Users'; 
+ import Stock from './pages/Stock';
 //componentes del DEmo
 
 import ChartDemo from './components/ChartDemo';
@@ -145,7 +146,12 @@ const App = () => {
                 label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'
             }]
         },
-       
+        {
+            label: 'Productos',
+            items: [{
+                label: 'Productos Base', icon: 'pi pi-fw pi-table', to: '/stock'
+            }]
+        },
         {
             label: 'Opciones',
             items: [
@@ -253,6 +259,7 @@ const App = () => {
                     <Route path="/chart" render={() => <ChartDemo colorMode={layoutColorMode} />} />
                     {/*  De maree */} 
                     <Route path="/users" component={Users} /> 
+                    <Route path="/stock" component={Stock} />
                 </div>
 
                 <AppFooter layoutColorMode={layoutColorMode} />

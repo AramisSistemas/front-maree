@@ -1,7 +1,7 @@
 import axios from 'axios' 
 const request = axios.create({
-//baseURL: 'https://localhost:7120',
-baseURL: 'https://mareeweb.azurewebsites.net', //la oficial
+baseURL: 'https://localhost:7277',
+//baseURL: 'https://mareeweb.azurewebsites.net', //la oficial
 })
 
 request.interceptors.request.use(
