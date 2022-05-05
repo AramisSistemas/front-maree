@@ -18,6 +18,7 @@ import { actualizarUsuario, eliminarUser } from '../redux/usersducks';
 import { StockService } from '../service/StockService';
 
 const Stock = () => {
+
     const dispatch = useDispatch();
     const activo = useSelector(store => store.users.activo);
     const stockService = new StockService();
@@ -27,6 +28,7 @@ const Stock = () => {
     const [rubros, setrubros] = useState([]);
     const [ubicaciones, setubicaciones] = useState([]);
 
+    
     const fetchAuxiliares = async () => {
         setloading(true);
         await stockService.GetIvas()
@@ -59,7 +61,7 @@ const Stock = () => {
         activo ? (
             <div className="col-12">
                 <div className="card">
-                    <h5>Materia Prima</h5>
+                    <h5>Stock Base</h5>
                     <DataTable header={header}  >
 
                     </DataTable>
